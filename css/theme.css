@@ -1,0 +1,143 @@
+/* Page */
+
+body {
+    height: 100%;
+    width: 96%;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        width: 88%
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+    body {
+        width: 88%
+    }
+}
+
+body {
+    max-width: 560px
+}
+
+
+/* Header */
+
+header {
+    margin-top: 50px;
+    text-align: center;
+    animation: fade-in-down .6s;
+    animation-delay: .3s;
+    animation-fill-mode: both
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+header .avatar {
+    width: 125px;
+    margin-bottom: 25px;
+    border-radius: 100%;
+    transition: all .2s;
+    box-shadow: 0;
+    opacity: 1;
+}
+
+header .title {
+    color: #222;
+    font-size: 1.5rem;
+    margin-bottom: 0 0 13px;
+}
+
+header .description {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #aaa;
+    margin: 0 0 30px
+}
+
+a {
+    text-decoration: none;
+}
+
+header .social-links>.link>svg {
+    display: inline-box;
+    fill: #222;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0.45rem;
+}
+
+header .social-links>.link:hover>svg {
+    transition: fill .2s ease;
+    fill: #0366d6;
+}
+
+header .section-links {
+    margin: 2rem 0;
+}
+
+header .section-links>a {
+    padding: 0 1rem;
+    color: #222;
+}
+
+header .section-links>a:hover {
+    transition: color .2s ease;
+    color: #0366d6;
+}
+
+
+/* Main */
+
+main h2 {
+    text-align: center;
+    color: #222;
+    border-bottom: 1px solid #ededed;
+    padding: 15px;
+    margin: 40px 0 25px 0;
+}
+
+main p {
+    line-height: 1.5;
+    text-align: justify;
+    color: #666;
+}
+
+main ul li {
+    line-height: 1.5rem;
+    font-weight: 400;
+    color: #666;
+}
+
+main .project h3 {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+main .project>.tags>span {
+    color: white;
+    background: blue;
+    padding: 0.1rem 0.3rem;
+    border-radius: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    color: #aaa;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px 0;
+}
