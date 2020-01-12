@@ -3,7 +3,8 @@
 body {
     height: 100%;
     width: 96%;
-    margin: 0 auto
+    margin: 0 auto;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @media only screen and (max-width: 400px) {
@@ -68,6 +69,11 @@ header .description {
 
 a {
     text-decoration: none;
+    color: #0366d6;
+}
+
+a:visited {
+    color: #0366d6;
 }
 
 header .social-links>.link>svg {
@@ -81,20 +87,6 @@ header .social-links>.link>svg {
 header .social-links>.link:hover>svg {
     transition: fill .2s ease;
     fill: #0366d6;
-}
-
-header .section-links {
-    margin: 2rem 0;
-}
-
-header .section-links>a {
-    padding: 0 1rem;
-    color: #222;
-}
-
-header .section-links>a:hover {
-    transition: color .2s ease;
-    color: #0366d6;
 }
 
 
@@ -120,16 +112,48 @@ main ul li {
     color: #666;
 }
 
-main .project h3 {
-    font-weight: 400;
-    margin-bottom: 0;
+main .about {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+main .about>.date {
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+main .project {
+    margin-bottom: 3rem;
+}
+
+main .project>.title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #222;
+    fill: #222;
+}
+
+main .project>.title main .project>.title:hover {
+    transition: color .2s ease;
+    transition: fill .2s ease;
+    color: #0366d6;
+    fill: #0366d6;
+}
+
+main .project>.title>.icon {
+    height: 1rem;
+    width: 1rem;
 }
 
 main .project>.tags>span {
+    font-size: 0.8rem;
     color: white;
-    background: blue;
-    padding: 0.1rem 0.3rem;
-    border-radius: 1rem;
+    background: #0366d6;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.8rem;
+    margin-right: 0.2rem;
 }
 
 
