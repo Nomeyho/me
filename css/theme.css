@@ -1,3 +1,26 @@
+:root {
+    --color-background: #ffffff;
+    --color-link: #0366d6;
+    --color-text: #666;
+    --color-text-secondary: #aaa;
+    --color-title: #222;
+    --color-border: #ededed;
+    --color-tag-background: #0366d6;
+    --color-tag-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --color-background: #1A191E;
+    --color-link: #0366d6;
+    --color-text: #b3b3b3;
+    --color-text-secondary: #aaa;
+    --color-title: white;
+    --color-border: #666;
+    --color-tag-background: #0366d6;
+    --color-tag-text: white;
+}
+
+
 /* Page */
 
 body {
@@ -5,6 +28,7 @@ body {
     width: 96%;
     margin: 0 auto;
     font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--color-background);
 }
 
 @media only screen and (max-width: 400px) {
@@ -21,6 +45,25 @@ body {
 
 body {
     max-width: 560px
+}
+
+
+/* Theme toggle */
+
+#themeSwitch svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    fill: var(--color-text);
+}
+
+#themeSwitch:hover svg {
+    fill: var(--color-link);
+    transition: fill .2s ease;
 }
 
 
@@ -55,7 +98,7 @@ header .avatar {
 }
 
 header .title {
-    color: #222;
+    color: var(--color-title);
     font-size: 1.5rem;
     margin-bottom: 0 0 13px;
 }
@@ -63,22 +106,22 @@ header .title {
 header .description {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #aaa;
+    color: var(--color-text-secondary);
     margin: 0 0 30px
 }
 
 a {
     text-decoration: none;
-    color: #0366d6;
+    color: var(--color-link);
 }
 
 a:visited {
-    color: #0366d6;
+    color: var(--color-link);
 }
 
 header .social-links>.link>svg {
     display: inline-box;
-    fill: #222;
+    fill: var(--color-title);
     height: 1.2rem;
     width: 1.2rem;
     margin: 0.45rem;
@@ -86,7 +129,7 @@ header .social-links>.link>svg {
 
 header .social-links>.link:hover>svg {
     transition: fill .2s ease;
-    fill: #0366d6;
+    fill: var(--color-link);
 }
 
 
@@ -94,31 +137,35 @@ header .social-links>.link:hover>svg {
 
 main h2 {
     text-align: center;
-    color: #222;
-    border-bottom: 1px solid #ededed;
+    color: var(--color-title);
+    border-bottom: 1px solid var(--color-border);
     padding: 15px;
     margin: 40px 0 25px 0;
+}
+
+main h3 {
+    color: var(--color-title);
 }
 
 main p {
     line-height: 1.5;
     text-align: justify;
-    color: #666;
+    color: var(--color-text);
 }
 
 main ul li {
     line-height: 1.5rem;
     font-weight: 400;
-    color: #666;
+    color: var(--color-text);
 }
 
 main .about {
     margin-bottom: 1rem;
-    color: #666;
+    color: var(--color-text);
 }
 
 main .about>.date {
-    color: #222;
+    color: var(--color-title);
     font-weight: 500;
     margin-bottom: 0.5rem;
     display: block;
@@ -131,15 +178,15 @@ main .project {
 main .project>.title {
     font-weight: 500;
     font-size: 1.2rem;
-    color: #222;
-    fill: #222;
+    color: var(--color-title);
+    fill: var(--color-title);
 }
 
 main .project>.title main .project>.title:hover {
     transition: color .2s ease;
     transition: fill .2s ease;
-    color: #0366d6;
-    fill: #0366d6;
+    color: var(--color-link);
+    fill: var(--color-link);
 }
 
 main .project>.title>.icon {
@@ -149,8 +196,8 @@ main .project>.title>.icon {
 
 main .project>.tags>span {
     font-size: 0.8rem;
-    color: white;
-    background: #0366d6;
+    color: var(--color-tag-text);
+    background: var(--color-tag-background);
     padding: 0.15rem 0.5rem;
     border-radius: 0.8rem;
     margin-right: 0.2rem;
@@ -160,7 +207,7 @@ main .project>.tags>span {
 /* Footer */
 
 footer {
-    color: #aaa;
+    color: var(--color-text-secondary);
     font-size: 0.8rem;
     text-align: center;
     padding: 20px 0;

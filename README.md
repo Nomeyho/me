@@ -4,8 +4,3 @@
 
 
 Inspired from [https://jibolash.github.io/Eve/](https://jibolash.github.io/Eve/).
-
-TODO:
-font
-dart theme
-avatar
