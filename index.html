@@ -12,7 +12,212 @@
     <meta name="language" content="EN" />
     <meta name="robots" content="All" />
     <title> Nomeyho </title>
-    <link rel="stylesheet" type="text/css" title="style" href="css/theme.css">
+    <style>
+         :root {
+            --color-background: #ffffff;
+            --color-link: #0366d6;
+            --color-text: #666;
+            --color-text-secondary: #aaa;
+            --color-title: #222;
+            --color-border: #ededed;
+            --color-tag-background: #0366d6;
+            --color-tag-text: #ffffff;
+        }
+        
+        [data-theme="dark"] {
+            --color-background: #1A191E;
+            --color-link: #0366d6;
+            --color-text: #b3b3b3;
+            --color-text-secondary: #aaa;
+            --color-title: white;
+            --color-border: #666;
+            --color-tag-background: #0366d6;
+            --color-tag-text: white;
+        }
+        /* Page */
+        
+        body {
+            height: 100%;
+            width: 96%;
+            margin: 0 auto;
+            font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--color-background);
+        }
+        
+        @media only screen and (max-width: 400px) {
+            body {
+                width: 88%
+            }
+        }
+        
+        @media only screen and (min-width: 400px) and (max-width: 1050px) {
+            body {
+                width: 88%
+            }
+        }
+        
+        body {
+            max-width: 560px
+        }
+        /* Theme toggle */
+        
+        #themeSwitch svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2rem;
+            width: 2rem;
+            margin: 1rem;
+            cursor: pointer;
+            fill: var(--color-text);
+        }
+        
+        #themeSwitch:hover svg {
+            fill: var(--color-link);
+            transition: fill .2s ease;
+        }
+        /* Header */
+        
+        header {
+            margin-top: 50px;
+            text-align: center;
+            animation: fade-in-down .6s;
+            animation-delay: .3s;
+            animation-fill-mode: both
+        }
+        
+        @keyframes fade-in-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px)
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        
+        header .avatar {
+            width: 125px;
+            margin-bottom: 25px;
+            border-radius: 100%;
+            transition: all .2s;
+            box-shadow: 0;
+            opacity: 1;
+        }
+        
+        header .title {
+            color: var(--color-title);
+            font-size: 1.5rem;
+            margin-bottom: 0 0 13px;
+        }
+        
+        header .description {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--color-text-secondary);
+            margin: 0 0 30px
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--color-link);
+        }
+        
+        a:visited {
+            color: var(--color-link);
+        }
+        
+        header .social-links>.link>svg {
+            display: inline-box;
+            fill: var(--color-title);
+            height: 1.2rem;
+            width: 1.2rem;
+            margin: 0.45rem;
+        }
+        
+        header .social-links>.link:hover>svg {
+            transition: fill .2s ease;
+            fill: var(--color-link);
+        }
+        /* Main */
+        
+        main h2 {
+            text-align: center;
+            color: var(--color-title);
+            border-bottom: 1px solid var(--color-border);
+            padding: 15px;
+            margin: 40px 0 25px 0;
+        }
+        
+        main h3 {
+            color: var(--color-title);
+        }
+        
+        main p {
+            line-height: 1.5;
+            text-align: justify;
+            color: var(--color-text);
+        }
+        
+        main ul li {
+            line-height: 1.5rem;
+            font-weight: 400;
+            color: var(--color-text);
+        }
+        
+        main .about {
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+        
+        main .about>.date {
+            color: var(--color-title);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        main .project {
+            margin-bottom: 3rem;
+        }
+        
+        main .project>.title {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: var(--color-title);
+            fill: var(--color-title);
+        }
+        
+        main .project>.title main .project>.title:hover {
+            transition: color .2s ease;
+            transition: fill .2s ease;
+            color: var(--color-link);
+            fill: var(--color-link);
+        }
+        
+        main .project>.title>.icon {
+            height: 1rem;
+            width: 1rem;
+        }
+        
+        main .project>.tags>span {
+            font-size: 0.8rem;
+            color: var(--color-tag-text);
+            background: var(--color-tag-background);
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.8rem;
+            margin-right: 0.2rem;
+        }
+        /* Footer */
+        
+        footer {
+            color: var(--color-text-secondary);
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
