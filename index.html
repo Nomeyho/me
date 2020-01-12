@@ -207,6 +207,7 @@
             padding: 0.15rem 0.5rem;
             border-radius: 0.8rem;
             margin-right: 0.2rem;
+            margin-bottom: 0.2rem;
         }
         /* Footer */
         
@@ -482,17 +483,22 @@
     var useDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var themeSwitch = document.getElementById('themeSwitch');
 
-    themeSwitch.addEventListener('click', function() {
+    function setTheme() {
         if (useDarkTheme) {
-            useDarkTheme = false;
-            document.body.removeAttribute('data-theme');
-            themeSwitch.getElementsByTagName('use')[0].setAttribute('xlink:href', '#icon-moon');
-        } else {
-            useDarkTheme = true;
             document.body.setAttribute('data-theme', 'dark');
             themeSwitch.getElementsByTagName('use')[0].setAttribute('xlink:href', '#icon-sun');
+        } else {
+            document.body.removeAttribute('data-theme');
+            themeSwitch.getElementsByTagName('use')[0].setAttribute('xlink:href', '#icon-moon');
         }
+    }
+
+    themeSwitch.addEventListener('click', function() {
+        useDarkTheme = !useDarkTheme;
+        setTheme();
     });
+
+    setTheme();
 </script>
 
 </html>
