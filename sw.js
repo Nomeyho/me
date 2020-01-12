@@ -14,12 +14,12 @@ self.addEventListener('install', function(e) {
     );
 });
 
-self.addEventListener('activate', function(e) {
-    e.waitUntil(self.clients.claim());
+self.addEventListener('activate', event => {
+    event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', function(e) {
-    e.respondWith(
+self.addEventListener('fetch', event => {
+    event.respondWith(
         caches.open(cacheName)
         .then(cache => cache.match(event.request, { ignoreSearch: true }))
         .then(response => {
